@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>前后端交互的简单模拟 | A-pupil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端交互的简单模拟">
+<meta property="og:url" content="http://yoursite.com/2016/01/24/Ajax/前后端交互的简单模拟/index.html">
+<meta property="og:site_name" content="A-pupil">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:updated_time" content="2018-01-24T09:24:10.475Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前后端交互的简单模拟">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+  
+    <link rel="alternate" href="/atom.xml" title="A-pupil" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">A-pupil</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">脑小友:~你努力了吗?~</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Ajax/前后端交互的简单模拟" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/24/Ajax/前后端交互的简单模拟/" class="article-date">
+  <time datetime="2016-01-24T09:23:38.000Z" itemprop="datePublished">2016-01-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前后端交互的简单模拟
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line">/*封装一个ajax工具函数*/</span><br><span class="line">/*</span><br><span class="line">* 为什么需要封装：</span><br><span class="line">* 1.书写大量的冗余代码</span><br><span class="line">* 2.提高开发效率 方便</span><br><span class="line">* */</span><br><span class="line">/*</span><br><span class="line">* 分析使用ajax过程当中那些东西不确定不一样</span><br><span class="line">* 请求：</span><br><span class="line">* 请求方式</span><br><span class="line">* 请求地址</span><br><span class="line">* 是否异步</span><br><span class="line">* 发送数据</span><br><span class="line">* 响应：</span><br><span class="line">* 成功的是做的业务不一样</span><br><span class="line">* 失败的是做的业务不一样</span><br><span class="line">* 思路</span><br><span class="line">* */</span><br><span class="line">/*</span><br><span class="line">* 通过参数确定下来，怎么时候ajax参考文档</span><br><span class="line">* 参数名称        参数类型        参数默认值       参数说明</span><br><span class="line">* type           string          get             请求的方式</span><br><span class="line">* url            string          当前地址         请求的地址</span><br><span class="line">* async          boolean         true             是否异步</span><br><span class="line">* data           object          &#123;&#125;               发送的数据</span><br><span class="line">* success        function                        成功回调函数</span><br><span class="line">* error          function                        失败回调函数</span><br><span class="line">* */</span><br><span class="line"></span><br><span class="line">/*ajax封装*/</span><br><span class="line">/*为了和jquery保持一致性*/</span><br><span class="line">window.$ = &#123;&#125;;</span><br><span class="line">/*给$全局对象一个属性  ajax 指向一个函数*/</span><br><span class="line">$.ajax = function (options) &#123;</span><br><span class="line">    /*options 是一个对象  参数可以设置成6个参*/</span><br><span class="line">    /*判断参数的有效性*/</span><br><span class="line">    if(!options || typeof options != &apos;object&apos;) return false;</span><br><span class="line">    /*设置默认参数*/</span><br><span class="line">    var type = options.type === &apos;post&apos; ? &apos;post&apos; : &apos;get&apos;;</span><br><span class="line">    /*</span><br><span class="line">    * location.hash   地址栏的哈希   锚点</span><br><span class="line">    * location.search  地址栏的查询信息   参数</span><br><span class="line">    * location.pathname 地址栏当中的绝对路径</span><br><span class="line">    * */</span><br><span class="line">    var url = options.url || location.pathname;</span><br><span class="line">    var async = options.async === false ? false :true;</span><br><span class="line">    var data = typeof options.data == &apos;object&apos; ? options.data : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    /*发送的数据格式需要转换成键值对的字符串格式*/</span><br><span class="line">    /*｛name:xgg,age:17｝--&gt;name=xgg&amp;age=17 */</span><br><span class="line">    var dataString = &apos;&apos;;</span><br><span class="line">    for(var key in data)&#123;</span><br><span class="line">        dataString += key+&apos;=&apos;+data[key]+&apos;&amp;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    /*如果有数据 去除最后一个&amp;符号*/</span><br><span class="line">    /*if(dataString)&#123;</span><br><span class="line">        dataString = dataString.slice(0,-1);</span><br><span class="line">    &#125;*/</span><br><span class="line">    dataString = dataString &amp;&amp; dataString.slice(0,-1);</span><br><span class="line"></span><br><span class="line">    /*ajax编程*/</span><br><span class="line">    var xhr = new XMLHttpRequest();</span><br><span class="line">    /*请求*/</span><br><span class="line">    /*请求行*/</span><br><span class="line">    xhr.open(type,type==&apos;get&apos;?url+&apos;?&apos;+dataString:url,async);</span><br><span class="line">    /*请求头*/</span><br><span class="line">    if(type != &apos;get&apos;)&#123;</span><br><span class="line">        xhr.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    /*请求主体*/</span><br><span class="line">    xhr.send(type == &apos;get&apos; ? null : dataString );</span><br><span class="line"></span><br><span class="line">    /*响应*/</span><br><span class="line">    xhr.onreadystatechange = function () &#123;</span><br><span class="line">        /*if(xhr.readyState == 4 &amp;&amp; xhr.status == 200)&#123;</span><br><span class="line">        &#125;*/</span><br><span class="line">        if(xhr.readyState == 4)&#123;</span><br><span class="line">            /*通讯完成*/</span><br><span class="line">            if(xhr.status == 200)&#123;</span><br><span class="line">                /*成功*/</span><br><span class="line">                /*获取后台返回的数据  并处理数据格式 */</span><br><span class="line">                /*怎么确定后台返回的是什么格式的数据*/</span><br><span class="line">                /*content-type 告诉客户端响应的类型*/</span><br><span class="line">                /*约定：如果类型当中包含xml  返回xml数据*/</span><br><span class="line">                /*约定：如果类型当中包含json  返回json数据*/</span><br><span class="line">                var ct = xhr.getResponseHeader(&apos;Content-Type&apos;);</span><br><span class="line">                var result = null;</span><br><span class="line">                if(ct.indexOf(&apos;xml&apos;) &gt; -1)&#123;</span><br><span class="line">                    result = xhr.responseXML;</span><br><span class="line">                &#125;else if(ct.indexOf(&apos;json&apos;) &gt; -1)&#123;</span><br><span class="line">                    var jsonString = xhr.responseText;/* null &apos;&apos; */</span><br><span class="line">                    result = jsonString &amp;&amp; JSON.parse(jsonString);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    result = xhr.responseText;</span><br><span class="line">                &#125;</span><br><span class="line">                /*传递给需要处理业务的程序*/</span><br><span class="line">                options.success &amp;&amp; options.success(result);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                /*失败*/</span><br><span class="line">                var info = &#123;status:xhr.status,statusText:xhr.statusText&#125;;</span><br><span class="line">                options.error &amp;&amp; options.error(info);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">/*补充工具函数*/</span><br><span class="line">$.get = function (options) &#123;</span><br><span class="line">    options.type = &apos;get&apos;;</span><br><span class="line">    $.ajax(options);</span><br><span class="line">&#125;</span><br><span class="line">$.post = function (options) &#123;</span><br><span class="line">    options.type = &apos;post&apos;;</span><br><span class="line">    $.ajax(options);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    success:function (data) &#123;</span><br><span class="line">        /!*处理成功业务*!/</span><br><span class="line">    &#125;,</span><br><span class="line">    error:function (info) &#123;</span><br><span class="line">        /!*处理失败业务*!/</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);*/</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/01/24/Ajax/前后端交互的简单模拟/" data-id="cjcsv7uc20002hwugkvkz7119" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/24/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/24/html/">firstFile</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/24/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/24/Ajax/前后端交互的简单模拟/">前后端交互的简单模拟</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
